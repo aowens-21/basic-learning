@@ -8,16 +8,9 @@ BOOLEAN_OR = ((np.array([0, 0]), 0), (np.array([0, 1]), 1), (np.array([1, 0]), 1
 def sigmoid(excitation):
     return 1 / (1 + np.exp(-excitation))
 
-def compute_output(weight_vec, input_vec, bias_vec, firing_func=sigmoid):
-    """ Returns neuron's actual output with given inputs, weights, and bias.
-    
-    Optional Parameter:
-    firing_function - This defaults to sigmoid function, but if you have
-    another to test you can pass it in provided it takes excitation. Be careful
-    though because this could cause some weird problems if your function isn't
-    correct.
-    """
-    return firing_func(compute_excitation(weight_vec, input_vec, bias_vec))
+def compute_output(weight_vec, input_vec, bias_vec):
+    """ Returns neuron's actual output with given inputs, weights, and bias. """
+    return sigmoid(compute_excitation(weight_vec, input_vec, bias_vec))
 
 def compute_excitation(weight_vec, input_vec, bias_vec):
     """ Returns neuron excitation. """
