@@ -3,7 +3,7 @@ A few python examples of the [steepest descent](https://en.wikipedia.org/wiki/Gr
 boolean functions with (almost) pure python
 
 ## One Neuron
-The one neuron learning example just uses repeatedly pushes input and expected output into one neuron and computes gradients
+The one neuron learning example just repeatedly pushes input and expected output into one neuron and computes gradients
 using [backpropogation](https://en.wikipedia.org/wiki/Backpropagation) which it then uses to find the correct weights for 
 the inputs. Doing this, it can learn boolean AND and OR.
 
